@@ -1,0 +1,8 @@
+I0601 11:41:50.287245 140586570848064 resolver.py:79] Using /tmp/tfhub_modules to cache modules.
+I0601 11:41:57.794253 140586570848064 train.py:137] step 0 - loss: 1.97 - accuracy: 10.00%
+I0601 11:42:03.127130 140586570848064 train.py:150] ------------------------------------------- Validation: loss =  1.54,  accuracy 22.27%
+I0601 11:42:03.262037 140586570848064 train.py:137] step 1 - loss: 1.40 - accuracy: 30.00%
+I0601 11:42:03.412450 140586570848064 train.py:137] step 2 - loss: 1.65 - accuracy: 20.00%
+I0601 11:42:03.609278 140586570848064 train.py:137] step 3 - loss: 0.92 - accuracy: 80.00%
+I0601 11:42:03.771562 140586570848064 train.py:137] step 4 - loss: 2.02 - accuracy: 20.00%
+I0601 11:42:03.953025 140586570848064 train.py:137] step 5 - loss: 1.97 - accuracy: 20.00%

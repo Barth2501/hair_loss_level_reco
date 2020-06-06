@@ -1,0 +1,4 @@
+I0604 15:48:19.067755 140222882907968 resolver.py:79] Using /tmp/tfhub_modules to cache modules.
+I0604 15:48:19.068320 140222882907968 resolver.py:413] Downloading TF-Hub Module 'https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4'.
+I0604 15:48:22.721155 140222882907968 resolver.py:122] Downloaded https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4, Total size: 9.75MB
+I0604 15:48:22.721638 140222882907968 resolver.py:428] Downloaded TF-Hub Module 'https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4'.
