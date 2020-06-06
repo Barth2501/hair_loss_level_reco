@@ -13,7 +13,7 @@ from operator import itemgetter
 
 from data import utils as target_dataset
 from models.mobilenet import MobileNet
-from models.resnet_50 import ResNet_50
+from models.resnet_50 import ResNet_50, ResNet_perso_50
 
 # default project structure
 
@@ -70,7 +70,8 @@ def main(argv):
     # ========================= Do transfer learning ===========================
 
     #model = MobileNet(fine_tune=FLAGS.fine_tune)
-    model = ResNet_50(fine_tune=FLAGS.fine_tune)
+    #model = ResNet_50(fine_tune=FLAGS.fine_tune)
+    model = ResNet_perso_50(resnet_trainable_layers=25)
     model.build(input_shape=(FLAGS.batch_size, 224, 224, 3))
     model.summary()
 
