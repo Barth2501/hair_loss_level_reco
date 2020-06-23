@@ -2,10 +2,11 @@ import tensorflow as tf
 
 from absl import app, flags, logging
 from models.mobilenet import MobileNet
+from models.resnet_50 import ResNet_50
 
 def main(argv):
-    model = MobileNet()
-    model.load_weights('./saved_model/mobilenet_000200_bs128.tf').expect_partial()
+    model = ResNet_50()
+    model.load_weights('./saved_model/mobilenet_001000_bs180.tf').expect_partial()
     #model = tf.keras.models.load_model('./saved_model/mobilenet_000145_bs50.h5')
     image = tf.io.read_file(FLAGS.image)
     img_raw = tf.image.decode_jpeg(image)

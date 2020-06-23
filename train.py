@@ -50,6 +50,10 @@ from models.resnet_50 import ResNet_50, ResNet_perso_50
 
 def main(argv):
 
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    tf.config.experimental.set_memory_growth(gpus[0], True)
+    tf.config.optimizer.set_jit(True)
+
     np.random.seed(43) # to make the results reproductible
     tf.random.set_seed(42) # to make the results reproductible 
 
@@ -70,8 +74,8 @@ def main(argv):
     # ========================= Do transfer learning ===========================
 
     #model = MobileNet(fine_tune=FLAGS.fine_tune)
-    #model = ResNet_50(fine_tune=FLAGS.fine_tune)
-    model = ResNet_perso_50(resnet_trainable_layers=25)
+    amodel = ResNet_50(fine_tune=FLAGS.fine_tune)
+    # model = ResNet_perso_50(resnet_trainable_layers=25)
     model.build(input_shape=(FLAGS.batch_size, 224, 224, 3))
     model.summary()
 

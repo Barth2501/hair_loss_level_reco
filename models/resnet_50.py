@@ -29,11 +29,11 @@ class ResNet_perso_50(Model):
 
         self.resnet = ResNet50(include_top=False, weights='imagenet', input_shape=(224,224,3))
     
-        for layer in self.resnet.layers[:-resnet_trainable_layers]:
+        for layer in self.resnet.layers:
             layer.trainable=False
-        # if resnet_trainable_layers!=0:
-        #     for layer in self.resnet.layers[-resnet_trainable_layers:]:
-        #         layer.trainable=True
+        if resnet_trainable_layers!=0:
+            for layer in self.resnet.layers[-resnet_trainable_layers:]:
+                layer.trainable=True
 
         self.flatten = Flatten()
         self.dense = Dense(4, activation='softmax') 

@@ -1,2 +1,2 @@
-model_checkpoint_path: "mobilenet_000400_bs128.tf"
-all_model_checkpoint_paths: "mobilenet_000400_bs128.tf"
+model_checkpoint_path: "mobilenet_001000_bs180.tf"
+all_model_checkpoint_paths: "mobilenet_001000_bs180.tf"
