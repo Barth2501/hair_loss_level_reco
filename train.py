@@ -74,7 +74,7 @@ def main(argv):
     # ========================= Do transfer learning ===========================
 
     #model = MobileNet(fine_tune=FLAGS.fine_tune)
-    amodel = ResNet_50(fine_tune=FLAGS.fine_tune)
+    model = ResNet_50(fine_tune=FLAGS.fine_tune)
     # model = ResNet_perso_50(resnet_trainable_layers=25)
     model.build(input_shape=(FLAGS.batch_size, 224, 224, 3))
     model.summary()
